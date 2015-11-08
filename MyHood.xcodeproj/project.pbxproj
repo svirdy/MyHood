@@ -14,6 +14,7 @@
 		170D17B31BEEC45F00675B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170D17B11BEEC45F00675B7D /* LaunchScreen.storyboard */; };
 		170D17BD1BEEC4B000675B7D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D17BC1BEEC4B000675B7D /* Post.swift */; };
 		170D17C01BEEDB1C00675B7D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D17BF1BEEDB1C00675B7D /* PostCell.swift */; };
+		170D17C31BEEE90200675B7D /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D17C21BEEE90200675B7D /* AddPostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		170D17B41BEEC45F00675B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		170D17BC1BEEC4B000675B7D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		170D17BF1BEEDB1C00675B7D /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		170D17C21BEEE90200675B7D /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,9 @@
 			children = (
 				170D17BA1BEEC49600675B7D /* Model */,
 				170D17BE1BEEDAF400675B7D /* View */,
+				170D17C11BEEE8CF00675B7D /* Controller */,
 				170D17A81BEEC45F00675B7D /* AppDelegate.swift */,
-				170D17AA1BEEC45F00675B7D /* ViewController.swift */,
-				170D17AC1BEEC45F00675B7D /* Main.storyboard */,
 				170D17AF1BEEC45F00675B7D /* Assets.xcassets */,
-				170D17B11BEEC45F00675B7D /* LaunchScreen.storyboard */,
 				170D17B41BEEC45F00675B7D /* Info.plist */,
 			);
 			path = MyHood;
@@ -82,8 +82,19 @@
 			isa = PBXGroup;
 			children = (
 				170D17BF1BEEDB1C00675B7D /* PostCell.swift */,
+				170D17AC1BEEC45F00675B7D /* Main.storyboard */,
+				170D17B11BEEC45F00675B7D /* LaunchScreen.storyboard */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		170D17C11BEEE8CF00675B7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				170D17AA1BEEC45F00675B7D /* ViewController.swift */,
+				170D17C21BEEE90200675B7D /* AddPostVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			files = (
 				170D17BD1BEEC4B000675B7D /* Post.swift in Sources */,
 				170D17AB1BEEC45F00675B7D /* ViewController.swift in Sources */,
+				170D17C31BEEE90200675B7D /* AddPostVC.swift in Sources */,
 				170D17A91BEEC45F00675B7D /* AppDelegate.swift in Sources */,
 				170D17C01BEEDB1C00675B7D /* PostCell.swift in Sources */,
 			);
