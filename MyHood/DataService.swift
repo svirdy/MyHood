@@ -12,6 +12,7 @@ import UIKit
 class DataService {
     static let instance = DataService()
     
+    let KEY_POSTS = "posts"
     private var _loadedPosts = [Post]()
     
     var loadedPosts: [Post] {
@@ -19,11 +20,19 @@ class DataService {
     }
     
     func savePosts() {
-        
+        let postsData = NSKeyedArchiver.archivedDataWithRootObject(_loadedPosts)
+        NSUserDefaults.standardUserDefaults().setObject(postsData, forKey: KEY_POSTS)
     }
     
     func loadPosts() {
+        if let postsData = NSUserDefaults.standardUserDefaults().objectForKey(KEY_POSTS) as? NSData {
+            
+            if let postsArray = NSKeyedUnarchiver.unarchiveObjectWithData(postsData) as? [Post] {
+                _loadedPosts = postsArray
+            }
+        }
         
+        NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "postsLoaded", object: nil))
     }
     
     func saveImageAndCreatePath(image: UIImage) {
